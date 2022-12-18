@@ -10,5 +10,3 @@ One of the way the WordPress theme and plugin developers find where to hook into
 1. Clicking the 'Show Hooks' button will start showing you all the action hooks in the page you're on.
 1. You can continue to navigate around until you've found the action hook you're looking for, then switch off by clicking 'Hide Hooks'.
 1. Simple but effective. Enjoy!# WP-Hooks-Locator
-# WP-Hooks-Locator
-# WP-Hooks-Locator
