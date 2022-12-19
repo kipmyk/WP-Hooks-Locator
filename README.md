@@ -1,6 +1,6 @@
 # WP Hooks Locator
 
-One of the way the WordPress theme and plugin developers find where to hook into with add_action() and add_filter() functions is to search through the WordPress code base, plugin(s) or theme(s) or find find a reference to the hook in the codex.
+One of the way the WordPress theme and plugin developers find where to hook into with [add_action()](https://developer.wordpress.org/reference/functions/add_action/) and [add_filter()](https://developer.wordpress.org/reference/functions/add_filter/) functions is to search through the WordPress code base, plugin(s) or theme(s) or find find a reference to the hook in the codex.
 
 ## Installation
 
