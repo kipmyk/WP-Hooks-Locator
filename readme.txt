@@ -29,11 +29,3 @@ Up until now the way theme and plugin developers find where to hook into with th
 
 = 1.0.0 =
 * Initial release.
-
-echo "# WP-Hooks-Locator" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin git@github.com:kipmyk/WP-Hooks-Locator.git
-git push -u origin main

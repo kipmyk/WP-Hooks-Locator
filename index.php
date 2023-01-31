@@ -5,6 +5,8 @@ Plugin URI: https://github.com/kipmyk/WP-Hooks-Locator
 Description: WP Hooks Locator helps theme or plugin developers to quickly see where all the action and filter hooks are on any WordPress page.
 Version: 1.0.0
 Contributors: mikekipruto
+Requires at least: 5.2
+Requires PHP:      5.6
 Author: Mike Kipruto
 Author URI: https://kipmyk.co.ke/
 License: GPLv2 or later
