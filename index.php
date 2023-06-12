@@ -75,29 +75,25 @@ class mk_Hooks_Locator {
 		add_action( 'init', array( $this, 'plugin_init' ) );
 	}
 	
-	/**
-	 * Helper function that sets the active status of the hooks displaying.
-	 */
-	public function set_active_status() {
+/**
+ * Helper function that sets the active status of the hooks displaying.
+ */
+public function set_active_status() {
+	if ( ! isset( $this->status ) ) {
+		if ( ! isset( $_COOKIE['cxssh_status'] ) ) {
+			setcookie( 'cxssh_status', 'off', time() + 3600 * 24 * 100, '/' );
+		}
 		
-		if ( ! isset( $this->status ) ) {
-			
-			if ( ! isset( $_COOKIE['cxssh_status'] ) ) {
-				setcookie( 'cxssh_status', 'off', time()+3600*24*100, '/' );
-			}
-			
-			if ( isset( $_REQUEST['cxssh-hooks'] ) ) {
-				setcookie( 'cxssh_status', $_REQUEST['cxssh-hooks'], time()+3600*24*100, '/' );
-				$this->status = $_REQUEST['cxssh-hooks'];
-			}
-			elseif ( isset( $_COOKIE['cxssh_status'] ) ) {
-				$this->status = $_COOKIE['cxssh_status'];
-			}
-			else{
-				$this->status = 'off';
-			}
+		if ( isset( $_REQUEST['cxssh-hooks'] ) ) {
+			$this->status = $_REQUEST['cxssh-hooks'];
+			setcookie( 'cxssh_status', $this->status, time() + 3600 * 24 * 100, '/' );
+		} elseif ( isset( $_COOKIE['cxssh_status'] ) ) {
+			$this->status = $_COOKIE['cxssh_status'];
+		} else {
+			$this->status = 'off';
 		}
 	}
+}
 	
 	/**
 	 * Helper function to attach the filter that render all the hook labels.
